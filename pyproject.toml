@@ -19,5 +19,5 @@ plotting = [
     "pyvista==0.35.1",
 ]
 qt = [
-    "pyside==1.2.4",
+    "pyside==1.2.2",
 ]
