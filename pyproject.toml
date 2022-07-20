@@ -3,12 +3,11 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "dependabot-pyproject"
-version = "0.1.dev0"
-description = "A simple pyproject.toml file for testing dependabot"
-license = "MIT"
-authors = ["ANSYS, Inc. <ansys.support@ansys.com>"]
-requires-python = ">=3.7"
+name = "pkgtest"
+authors = [{name = "Ansys", email = "pyansys.support@ansys.com"}]
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+dynamic = ["version", "description"]
 dependencies = [
     "ansys-templates==0.3.0",
 ]
@@ -16,8 +15,5 @@ dependencies = [
 [project.optional-dependencies]
 plotting = [
     "matplotlib==3.5.1",
-    "pyvista==0.35.1",
-]
-qt = [
-    "pyside==1.2.2",
+    "pyvista==0.35.1"
 ]
