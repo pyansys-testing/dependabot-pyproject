@@ -2,30 +2,21 @@
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-[tool.poetry]
+[project]
 name = "dependabot-pyproject"
 version = "0.1.dev0"
 description = "A simple pyproject.toml file for testing dependabot"
 license = "MIT"
 authors = ["ANSYS, Inc. <ansys.support@ansys.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.8"
-ansys-templates = "=0.3.0"
-matplotlib = {version = "=3.5.1", optional = true}
-pyvista = {version = "=0.35.1", optional = true}
-pyside = {version = "=1.2.4", optional = true}
-
-[tool.poetry.extras]
-all = [
-    "matplotlib",
-    "pyvista",
-    "pyside",
+dependencies = [
+    "ansys-templates==0.3.0",
 ]
+
+[project.optional-dependencies]
 plotting = [
-    "matplotlib",
-    "pyvista",
+    "matplotlib==3.5.1",
+    "pyvista==0.35.1",
 ]
 qt = [
-    "pyside",
+    "pyside==1.2.4",
 ]
