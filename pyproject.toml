@@ -15,5 +15,5 @@ dependencies = [
 [project.optional-dependencies]
 plotting = [
     "matplotlib==3.5.1",
-    "pyvista==0.35.1"
+    "pyvista==0.37.0"
 ]
